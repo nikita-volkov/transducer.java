@@ -22,8 +22,8 @@ public final class ComposingTransducer<a, z> implements Transducer<a, z> {
   }
 
   @Override
-  public <output> Iteration<a, output> transduce(Iteration<z, output> initialIteration) {
-    Iteration iteration = initialIteration;
+  public <output> Iteration<a, output> transduce(Iteration<z, output> finalIteration) {
+    Iteration iteration = finalIteration;
     for (Transducer transducer : transducers) {
       iteration = transducer.transduce(iteration);
     }

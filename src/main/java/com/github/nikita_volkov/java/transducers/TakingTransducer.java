@@ -11,8 +11,8 @@ public final class TakingTransducer<a> implements Transducer<a, a> {
   }
 
   @Override
-  public <output> Iteration<a, output> transduce(Iteration<a, output> initialIteration) {
-    return new TakeIteration<>(initialIteration, amount);
+  public <output> Iteration<a, output> transduce(Iteration<a, output> finalIteration) {
+    return new TakeIteration<>(finalIteration, amount);
   }
 
 }
