@@ -21,6 +21,26 @@ public final class ComposingTransducer<a, z> implements Transducer<a, z> {
     this.transducers = new Transducer[]{transducer3, transducer2, transducer1};
   }
 
+  public <b, c, d> ComposingTransducer(
+    Transducer<a, b> transducer1,
+    Transducer<b, c> transducer2,
+    Transducer<c, d> transducer3,
+    Transducer<d, z> transducer4
+  ) {
+    this.transducers = new Transducer[]{transducer4, transducer3, transducer2, transducer1};
+  }
+
+
+  public <b, c, d, e> ComposingTransducer(
+    Transducer<a, b> transducer1,
+    Transducer<b, c> transducer2,
+    Transducer<c, d> transducer3,
+    Transducer<d, e> transducer4,
+    Transducer<e, z> transducer5
+  ) {
+    this.transducers = new Transducer[]{transducer5, transducer4, transducer3, transducer2, transducer1};
+  }
+
   @Override
   public <output> Iteration<a, output> transduce(Iteration<z, output> finalIteration) {
     Iteration iteration = finalIteration;
