@@ -10,4 +10,8 @@ public class Test extends TestCase {
     Transducer<Integer, String> transducer = new ComposingTransducer<>(new UniquifyingTransducer<>(), new MappingTransducer<>(a -> a.toString()));
     assertEquals("1234", transducer.transduce(new CatIteration()).consume(Arrays.asList(1, 2, 3, 4)));
   }
+  public void test2() {
+    Transducer<Integer, String> transducer = new ComposingTransducer<>(new UniquifyingTransducer<>(), new MappingTransducer<>(a -> a.toString()), new TakingTransducer<>(3));
+    assertEquals("123", transducer.transduce(new CatIteration()).consume(Arrays.asList(1, 2, 3, 4)));
+  }
 }
