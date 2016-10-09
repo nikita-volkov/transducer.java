@@ -32,7 +32,7 @@ public class Test extends TestCase {
   }
 
   public void testFlatmappingTransducer() {
-    Transducer<Integer, String> transducer = new FlatmappingTransducer<>(i -> i % 2 == 0 ? Arrays.asList(i.toString()) : Arrays.asList());
-    assertEquals("24", transducer.transduce(new CatIteration()).consume(Arrays.asList(1, 2, 3, 4, 5)));
+    Transducer<Integer, String> transducer = new FlatmappingTransducer<>(i -> i % 2 == 0 ? Arrays.asList(i.toString(), "!") : Arrays.asList());
+    assertEquals("2!4!", transducer.transduce(new CatIteration()).consume(Arrays.asList(1, 2, 3, 4, 5)));
   }
 }
