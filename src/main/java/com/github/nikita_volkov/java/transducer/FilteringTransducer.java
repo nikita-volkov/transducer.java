@@ -1,4 +1,4 @@
-package com.github.nikita_volkov.java.transducers;
+package com.github.nikita_volkov.java.transducer;
 
 import com.github.nikita_volkov.java.iterations.*;
 

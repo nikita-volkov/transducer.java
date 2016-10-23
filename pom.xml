@@ -5,17 +5,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.nikita-volkov.java</groupId>
-  <artifactId>transducers</artifactId>
+  <artifactId>transducer</artifactId>
   <version>0.1-SNAPSHOT</version>
 
-  <name>transducers</name>
-  <description>Composable transducers for Java</description>
-  <url>http://github.com/nikita-volkov/transducers.java</url>
+  <name>transducer</name>
+  <description>Composable transducer for Java</description>
+  <url>http://github.com/nikita-volkov/transducer.java</url>
 
   <licenses>
     <license>
       <name>MIT/X11</name>
-      <url>http://www.github.com/nikita-volkov/transducers.java/LICENSE</url>
+      <url>http://www.github.com/nikita-volkov/transducer.java/LICENSE</url>
     </license>
   </licenses>
 
@@ -28,9 +28,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:nikita-volkov/transducers.java.git</connection>
-    <url>scm:git:git@github.com:nikita-volkov/transducers.java.git</url>
-    <developerConnection>scm:git:git@github.com:nikita-volkov/transducers.java.git</developerConnection>
+    <connection>scm:git:git@github.com:nikita-volkov/transducer.java.git</connection>
+    <url>scm:git:git@github.com:nikita-volkov/transducer.java.git</url>
+    <developerConnection>scm:git:git@github.com:nikita-volkov/transducer.java.git</developerConnection>
   </scm>
 
   <distributionManagement>
@@ -131,7 +131,7 @@
     <dependency>
       <groupId>com.github.nikita-volkov.java</groupId>
       <artifactId>iterations</artifactId>
-      <version>0.4.4</version>
+      <version>0.4.5</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
