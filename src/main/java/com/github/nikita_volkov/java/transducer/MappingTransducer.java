@@ -14,7 +14,7 @@ public final class MappingTransducer<a, b> implements Transducer<a, b> {
 
   @Override
   public <output> Iteration<a, output> transduce(Iteration<b, output> finalIteration) {
-    return new ContramapIteration<>(finalIteration, fn);
+    return new ContramappingIteration<>(finalIteration, fn);
   }
 
 }

@@ -14,7 +14,7 @@ public final class FlatmappingTransducer<a, b> implements Transducer<a, b> {
 
   @Override
   public <output> Iteration<a, output> transduce(Iteration<b, output> finalIteration) {
-    return new ContraflatmapIteration<>(finalIteration, fn);
+    return new ContraflatmappingIteration<>(finalIteration, fn);
   }
 
 }

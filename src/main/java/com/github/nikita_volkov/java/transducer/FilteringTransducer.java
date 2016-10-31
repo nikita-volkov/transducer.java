@@ -14,7 +14,7 @@ public final class FilteringTransducer<a> implements Transducer<a, a> {
 
   @Override
   public <output> Iteration<a, output> transduce(Iteration<a, output> finalIteration) {
-    return new FilterIteration<>(finalIteration, predicate);
+    return new FilteringIteration<>(finalIteration, predicate);
   }
 
 }

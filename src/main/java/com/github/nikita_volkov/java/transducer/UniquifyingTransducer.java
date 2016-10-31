@@ -6,7 +6,7 @@ public final class UniquifyingTransducer<a> implements Transducer<a, a> {
 
   @Override
   public <output> Iteration<a, output> transduce(Iteration<a, output> finalIteration) {
-    return new UniqueIteration<a, output>(finalIteration);
+    return new UniquifyingIteration<>(finalIteration);
   }
 
 }

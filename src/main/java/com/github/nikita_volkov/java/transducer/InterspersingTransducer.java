@@ -12,7 +12,7 @@ public final class InterspersingTransducer<a> implements Transducer<a, a> {
 
   @Override
   public <output> Iteration<a, output> transduce(Iteration<a, output> finalIteration) {
-    return new IntersperseIteration<a, output>(finalIteration, separator);
+    return new InterspersingIteration<>(finalIteration, separator);
   }
 
 }
