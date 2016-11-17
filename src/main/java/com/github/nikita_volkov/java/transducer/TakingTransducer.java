@@ -1,6 +1,6 @@
 package com.github.nikita_volkov.java.transducer;
 
-import com.github.nikita_volkov.java.iterations.*;
+import com.github.nikita_volkov.java.reducer.*;
 
 public final class TakingTransducer<a> implements Transducer<a, a> {
 
@@ -11,8 +11,8 @@ public final class TakingTransducer<a> implements Transducer<a, a> {
   }
 
   @Override
-  public <output> Iteration<a, output> transduce(Iteration<a, output> finalIteration) {
-    return new TakingIteration<>(finalIteration, amount);
+  public <output> Reducer<a, output> transduce(Reducer<a, output> finalReducer) {
+    return new TakingReducer<>(finalReducer, amount);
   }
 
 }

@@ -1,6 +1,6 @@
 package com.github.nikita_volkov.java.transducer;
 
-import com.github.nikita_volkov.java.iterations.Iteration;
+import com.github.nikita_volkov.java.reducer.Reducer;
 
 public final class ComposingTransducer<a, z> implements Transducer<a, z> {
 
@@ -64,12 +64,12 @@ public final class ComposingTransducer<a, z> implements Transducer<a, z> {
   }
 
   @Override
-  public <output> Iteration<a, output> transduce(Iteration<z, output> finalIteration) {
-    Iteration iteration = finalIteration;
+  public <output> Reducer<a, output> transduce(Reducer<z, output> finalReducer) {
+    Reducer reducer = finalReducer;
     for (Transducer transducer : transducers) {
-      iteration = transducer.transduce(iteration);
+      reducer = transducer.transduce(reducer);
     }
-    return iteration;
+    return reducer;
   }
 
 }

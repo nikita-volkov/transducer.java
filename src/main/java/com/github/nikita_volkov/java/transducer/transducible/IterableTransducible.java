@@ -19,8 +19,8 @@ public final class IterableTransducible<input> implements Transducible<input> {
   }
 
   @Override
-  public <output> output reduce(Iteration<input, output> iteration) {
-    return reducible.reduce(iteration);
+  public <output> output execute(Iteration<input, output> iteration) {
+    return reducible.execute(iteration);
   }
 
 }

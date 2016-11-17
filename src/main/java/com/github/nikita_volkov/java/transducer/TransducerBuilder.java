@@ -1,6 +1,6 @@
 package com.github.nikita_volkov.java.transducer;
 
-import com.github.nikita_volkov.java.iterations.Iteration;
+import com.github.nikita_volkov.java.reducer.Reducer;
 
 import java.util.function.Function;
 
@@ -13,8 +13,8 @@ public final class TransducerBuilder<a, b> implements Transducer<a, b> {
   }
 
   @Override
-  public <output> Iteration<a, output> transduce(Iteration<b, output> finalIteration) {
-    return transducer.transduce(finalIteration);
+  public <output> Reducer<a, output> transduce(Reducer<b, output> finalReducer) {
+    return transducer.transduce(finalReducer);
   }
 
   public TransducerBuilder<a, b> take(long amount) {

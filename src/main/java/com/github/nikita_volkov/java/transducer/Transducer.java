@@ -1,7 +1,7 @@
 package com.github.nikita_volkov.java.transducer;
 
-import com.github.nikita_volkov.java.iterations.Iteration;
+import com.github.nikita_volkov.java.reducer.Reducer;
 
 public interface Transducer<a, b> {
-  <output> Iteration<a, output> transduce(Iteration<b, output> finalIteration);
+  <output> Reducer<a, output> transduce(Reducer<b, output> finalReducer);
 }

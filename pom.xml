@@ -130,13 +130,8 @@
   <dependencies>
     <dependency>
       <groupId>com.github.nikita-volkov.java</groupId>
-      <artifactId>iterations</artifactId>
-      <version>0.5</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.nikita-volkov.java</groupId>
       <artifactId>reducer</artifactId>
-      <version>0.1.1-SNAPSHOT</version>
+      <version>0.1.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

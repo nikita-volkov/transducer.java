@@ -1,6 +1,6 @@
 package com.github.nikita_volkov.java.transducer;
 
-import com.github.nikita_volkov.java.iterations.*;
+import com.github.nikita_volkov.java.reducer.*;
 
 import java.util.function.Function;
 
@@ -13,8 +13,8 @@ public final class FlatmappingTransducer<a, b> implements Transducer<a, b> {
   }
 
   @Override
-  public <output> Iteration<a, output> transduce(Iteration<b, output> finalIteration) {
-    return new ContraflatmappingIteration<>(finalIteration, fn);
+  public <output> Reducer<a, output> transduce(Reducer<b, output> finalReducer) {
+    return new ContraflatmappingReducer<>(finalReducer, fn);
   }
 
 }
